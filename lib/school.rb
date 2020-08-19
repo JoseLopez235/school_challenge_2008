@@ -14,4 +14,12 @@ class School
     time = @start_time.to_i + @hours_in_school_day
     return "#{time}:00"
   end
+
+  def is_full_time?
+    if @hours_in_school_day > 4
+      true
+    else
+      false
+    end
+  end
 end
