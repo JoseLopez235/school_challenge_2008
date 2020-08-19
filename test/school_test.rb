@@ -54,4 +54,17 @@ class SchoolTest < Minitest::Test
     assert_equal true, school1.is_full_time?
     assert_equal false, school2.is_full_time?
   end
+
+  def test_if_names_come_out_capitalized_in_list
+    school = School.new('9:00', 7)
+
+    school.add_student_name('Aurora')
+    school.add_student_name('tim')
+    school.add_student_name('megan')
+
+    expected = ["Aurora", "Tim", "Megan"]
+    actual = school.standard_student_names
+
+    assert_equal expected, actual
+  end
 end

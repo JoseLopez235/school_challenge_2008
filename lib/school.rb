@@ -22,4 +22,12 @@ class School
       false
     end
   end
+
+  def standard_student_names
+    names = []
+    @student_names.each do |student|
+      names << student.capitalize
+    end
+    names
+  end
 end
